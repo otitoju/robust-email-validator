@@ -26,25 +26,32 @@
   "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.0.0",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.0.0",
-    "jest": "^29.0.0",
-    "ts-jest": "^29.0.0",
-    "typescript": "^5.0.0"
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.19.1",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.8.3"
   },
-  "dependencies": {},
   "peerDependencies": {
     "node-fetch": "^3.0.0"
   },
-  "files": ["dist/**/*", "README.md", "LICENSE"],
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/robust-email-validator.git"
+    "url": "git+https://github.com/otitoju/robust-email-validator.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/robust-email-validator/issues"
+    "url": "https://github.com/otitoju/robust-email-validator/issues"
   },
-  "homepage": "https://github.com/yourusername/robust-email-validator#readme"
+  "homepage": "https://github.com/otitoju/robust-email-validator#readme",
+  "directories": {
+    "example": "examples"
+  }
 }

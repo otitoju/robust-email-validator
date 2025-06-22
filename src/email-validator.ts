@@ -23,7 +23,12 @@ export class EmailValidator {
       throw new Error("API key is required for deliverability checking")
     }
 
-    if ((this.options.checkDNS || this.options.checkMX) && typeof window !== "undefined") {
+    // Replace the window check with proper typing
+    if (
+      (this.options.checkDNS || this.options.checkMX) &&
+      typeof globalThis !== "undefined" &&
+      typeof (globalThis as any).window !== "undefined"
+    ) {
       console.warn("DNS/MX validation is not supported in browser environments")
       this.options.checkDNS = false
       this.options.checkMX = false

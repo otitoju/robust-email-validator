@@ -1,5 +1,26 @@
 import type { APIResponse } from "../types"
 
+// Add interface definitions at the top of the file after imports
+interface ZeroBounceResponse {
+  status: string
+  sub_status: string
+}
+
+interface MailgunResponse {
+  is_valid: boolean
+  is_deliverable: boolean
+  is_disposable_address: boolean
+  confidence: number
+}
+
+interface HunterResponse {
+  data: {
+    status: string
+    disposable: boolean
+    confidence: number
+  }
+}
+
 export class APIValidator {
   private apiKey: string
   private provider: "zerobounce" | "mailgun" | "hunter"
@@ -45,7 +66,7 @@ export class APIValidator {
         throw new Error(`ZeroBounce API error: ${response.status}`)
       }
 
-      const data = await response.json()
+      const data = (await response.json()) as ZeroBounceResponse
 
       return {
         isValid: data.status === "valid",
@@ -80,7 +101,7 @@ export class APIValidator {
         throw new Error(`Mailgun API error: ${response.status}`)
       }
 
-      const data = await response.json()
+      const data = (await response.json()) as MailgunResponse
 
       return {
         isValid: data.is_valid,
@@ -108,7 +129,7 @@ export class APIValidator {
         throw new Error(`Hunter API error: ${response.status}`)
       }
 
-      const data = await response.json()
+      const data = (await response.json()) as HunterResponse
       const result = data.data
 
       return {
