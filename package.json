@@ -1,6 +1,6 @@
 {
   "name": "robust-email-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A comprehensive email validation library with format, DNS, and deliverability checking",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,16 +15,99 @@
     "email",
     "validation",
     "validator",
-    "dns",
-    "mx",
-    "deliverability",
+    "email-validation",
+    "email-validator",
+    "email-verification",
+    "email-checker",
     "rfc5322",
+    "dns",
+    "mx-records",
+    "deliverability",
     "zerobounce",
     "mailgun",
-    "hunter"
+    "hunter",
+    "api",
+    "typescript",
+    "javascript",
+    "nodejs",
+    "browser",
+    "react",
+    "vue",
+    "angular",
+    "frontend",
+    "backend",
+    "fullstack",
+    "form-validation",
+    "input-validation",
+    "email-format",
+    "email-syntax",
+    "bulk-validation",
+    "batch-validation",
+    "real-time",
+    "async",
+    "promise",
+    "es6",
+    "commonjs",
+    "esm",
+    "umd",
+    "lightweight",
+    "fast",
+    "reliable",
+    "comprehensive",
+    "robust",
+    "professional",
+    "enterprise",
+    "production-ready"
   ],
-  "author": "Your Name",
+  "author": {
+    "name": "Otitoju John",
+    "email": "otitojuoluwapelumi@gmail.com",
+    "url": "https://github.com/otitoju"
+  },
+  "contributors": [
+    {
+      "name": "Otitoju John",
+      "email": "otitojuoluwapelumi@gmail.com",
+      "url": "https://github.com/otitoju"
+    }
+  ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otitoju/robust-email-validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/otitoju/robust-email-validator/issues",
+    "email": "otitojuoluwapelumi@gmail.com"
+  },
+  "homepage": "https://github.com/otitoju/robust-email-validator#readme",
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/otitoju"
+    },
+    {
+      "type": "patreon",
+      "url": "https://patreon.com/otitoju"
+    },
+    {
+      "type": "buymeacoffee",
+      "url": "https://buymeacoffee.com/otitoju"
+    }
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^20.19.1",
@@ -38,20 +121,25 @@
   "peerDependencies": {
     "node-fetch": "^3.0.0"
   },
+  "peerDependenciesMeta": {
+    "node-fetch": {
+      "optional": true
+    }
+  },
   "files": [
     "dist/**/*",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md",
+    "examples/**/*"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/otitoju/robust-email-validator.git"
-  },
-  "bugs": {
-    "url": "https://github.com/otitoju/robust-email-validator/issues"
-  },
-  "homepage": "https://github.com/otitoju/robust-email-validator#readme",
   "directories": {
+    "lib": "dist",
+    "test": "__tests__",
     "example": "examples"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
